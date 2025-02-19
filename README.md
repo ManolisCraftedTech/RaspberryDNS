@@ -177,4 +177,18 @@ After pasting the configuration into the file (use **SHIFT+INS** to paste in PuT
 
   ![image](https://github.com/user-attachments/assets/a64d6376-a1a2-459a-8982-386576d4421d)
 
-  Now, Pi-hole will use Unbound as the upstream DNS provider, ensuring more privacy and security for DNS queries! 🚀  
+  Now, Pi-hole will use Unbound as the upstream DNS provider, ensuring more privacy and security for DNS queries! 🚀
+
+  ### 16. Add More DNS Block Lists  
+
+In addition to the default lists, you can manually add more **DNS ad-blocking lists** from sources like GitHub.  
+
+![1](https://github.com/user-attachments/assets/032d0667-80ef-441e-8c22-a4f7d9460de3)
+
+
+With Pi-hole, Unbound, and additional block lists, your setup is now more secure, private, and effective at blocking unwanted content!
+
+![image](https://github.com/user-attachments/assets/6f78e230-b0c8-4ee8-8a8d-d02172f88b1f)
+
+
+
