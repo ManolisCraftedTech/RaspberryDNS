@@ -18,7 +18,8 @@
 <img width="240" alt="4" src="https://github.com/user-attachments/assets/c9febbf2-6309-4f26-9784-6c024697ef42" />
 
 In addition we want to set a strong password for the pi hole admin
--pihole -a -p
+
+- pihole -a -p
 
 ### 4. Set Up Login Credentials  
 - Choose a **username** (default is `pi`, but you can change it).  
@@ -79,7 +80,7 @@ Since we will be setting up **Unbound** later for local DNS resolution
 
 ### 12. Configure Devices to Use Pi-hole  
 
-Now that Pi-hole is set up and blocking ads, we need to configure devices to use it as their DNS server. There are two main ways to do this: manually or via DHCP.  
+Now that Pi-hole is set up and blocking ads, we need to configure devices to use it as their DNS server.   
 
 For **Windows 11**:  
 1. Go to **Network & Internet settings**.  
@@ -97,7 +98,7 @@ Now that Pi-hole is blocking ads, let's improve security and privacy by installi
 **Unbound** allows Pi-hole to directly query the DNS root servers for any uncached Fully Qualified Domain Name (FQDN), adding a layer of privacy.  
 By doing this, you'll route DNS queries directly from Pi-hole to the root DNS servers, keeping things more private and secure.Below listed the commands:
 - sudo apt install unbound -y
--sudo nano -w /etc/unbound/unbound.conf.d/pi-hole.conf 
+- sudo nano -w /etc/unbound/unbound.conf.d/pi-hole.conf 
 
 Copy and paste the following text below:
 
