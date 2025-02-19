@@ -26,21 +26,21 @@ In addition we want to set a strong password for the pi hole admin
 - Set a **strong password** for secure access.  
 <img width="350" alt="5" src="https://github.com/user-attachments/assets/0d82e56a-58e9-4715-8c1d-e43b5ea50f50" />
 
-### 6. Connect to the Raspberry Pi via SSH  
+### 5. Connect to the Raspberry Pi via SSH  
 Once you have the Raspberry Pi’s IP address, use SSH to access it remotely.  
 #### On Windows (Command Prompt):  
 - ssh <username>@<Raspberry_Pi_IP>
 
-### 7. Alternative SSH Connection (Using PuTTY)  
+### 6. Alternative SSH Connection (Using PuTTY)  
 If you prefer a graphical tool, you can use **PuTTY** to connect via SSH.
 
 <img width="324" alt="image" src="https://github.com/user-attachments/assets/bfaca309-be8f-46a3-953f-b2033ccbc902" />
 
-### 8. Update System Packages  
+### 7. Update System Packages  
 - Before installing anything, update your Raspberry Pi’s package list to ensure you have the latest versions.  
 - sudo apt update && sudo apt upgrade
 
-### 9. Set a Static IP on the Raspberry Pi  
+### 8. Set a Static IP on the Raspberry Pi  
 To ensure your Raspberry Pi always uses the same IP address, you can configure a static IP manually.  
 
 #### Edit the DHCP Configuration File  
@@ -53,7 +53,7 @@ Open the `dhcpcd.conf` file with the following command:
 This allows you to define a static IP address directly on the Raspberry Pi.
 
 
-### 10. Reboot and Install Pi-hole  
+### 9. Reboot and Install Pi-hole  
 After setting the static IP address or reserving it via DHCP, reboot the Raspberry Pi to apply the network settings:  
 - sudo reboot
 
@@ -68,7 +68,7 @@ Follow the on-screen instructions to complete the installation process
 <img width="379" alt="3" src="https://github.com/user-attachments/assets/2b1a9b38-5387-4c2f-8b17-a9ecd0339259" />
 
 
-### 11. Choose an Upstream DNS Provider  
+### 10. Choose an Upstream DNS Provider  
 The next step is to select an **upstream DNS provider** for Pi-hole. This is the DNS server Pi-hole will use to perform initial lookups (these will be cached afterward).  
 
 For now, we’ll use **Cloudflare (1.1.1.1)** as the upstream DNS provider
@@ -78,7 +78,7 @@ Since we will be setting up **Unbound** later for local DNS resolution
 <img width="98" alt="4" src="https://github.com/user-attachments/assets/3967d930-e3da-48bc-9f76-5d2df3ded9ab" />
 
 
-### 12. Configure Devices to Use Pi-hole  
+### 11. Configure Devices to Use Pi-hole  
 
 Now that Pi-hole is set up and blocking ads, we need to configure devices to use it as their DNS server.   
 
@@ -91,7 +91,7 @@ For **Windows 11**:
 
 ![image](https://github.com/user-attachments/assets/9a8e3029-5591-4ffc-9993-d31131620492)
 
-### 13. Enhance Privacy with Unbound  
+### 12. Enhance Privacy with Unbound  
 
 Now that Pi-hole is blocking ads, let's improve security and privacy by installing **Unbound**. Currently, Pi-hole forwards DNS requests to an upstream provider (Cloudflare in this case). However, some users may prefer not to have third parties tracking their DNS queries, even if Cloudflare doesn't log them.  
 
@@ -176,6 +176,7 @@ After pasting the configuration into the file (use **SHIFT+INS** to paste in PuT
 3. Hit **ENTER** to save the file and exit.
 
 - sudo service unbound restart
+  
 1. Log into the **Pi-hole Admin GUI**.  
 2. Navigate to **Settings** → **DNS**.  
 
@@ -188,7 +189,7 @@ After pasting the configuration into the file (use **SHIFT+INS** to paste in PuT
 
   Now, Pi-hole will use Unbound as the upstream DNS provider, ensuring more privacy and security for DNS queries! 🚀
 
-  ### 14. Add More DNS Block Lists  
+  ### 13. Add More DNS Block Lists  
 
 In addition to the default lists, you can manually add more **DNS ad-blocking lists** from sources like GitHub.  
 
