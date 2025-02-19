@@ -9,18 +9,26 @@
 
 ### 2. Flash the OS  
 - Open Raspberry Pi Imager.  
-- Click **"CHOOSE OS"** and select **"Raspberry Pi OS Lite (64-bit)"** from the list.
-<img width="338" alt="2" src="https://github.com/user-attachments/assets/ea99d06a-bdc5-4de3-ae22-b275ef7ea7b1" />  
+- Click **"CHOOSE OS"** and select **"Raspberry Pi OS  (64-bit)"** from the list.
+
 
 ### 3. Configure Basic Settings  
 - Enable **SSH** and select **password authentication** for remote access.  
 - Set a **hostname** (e.g., `pihole3.local`) to easily identify the device on the network.  
 <img width="240" alt="4" src="https://github.com/user-attachments/assets/c9febbf2-6309-4f26-9784-6c024697ef42" />
 
+In addition we want to set a strong password for the pi hole admin
+-pihole -a -p
+
 ### 4. Set Up Login Credentials  
 - Choose a **username** (default is `pi`, but you can change it).  
 - Set a **strong password** for secure access.  
 <img width="350" alt="5" src="https://github.com/user-attachments/assets/0d82e56a-58e9-4715-8c1d-e43b5ea50f50" />
+
+### 6. Connect to the Raspberry Pi via SSH  
+Once you have the Raspberry Pi’s IP address, use SSH to access it remotely.  
+#### On Windows (Command Prompt):  
+- ssh <username>@<Raspberry_Pi_IP>
 
 ### 7. Alternative SSH Connection (Using PuTTY)  
 If you prefer a graphical tool, you can use **PuTTY** to connect via SSH.
@@ -179,7 +187,7 @@ After pasting the configuration into the file (use **SHIFT+INS** to paste in PuT
 
   Now, Pi-hole will use Unbound as the upstream DNS provider, ensuring more privacy and security for DNS queries! 🚀
 
-  ### 16. Add More DNS Block Lists  
+  ### 14. Add More DNS Block Lists  
 
 In addition to the default lists, you can manually add more **DNS ad-blocking lists** from sources like GitHub.  
 
